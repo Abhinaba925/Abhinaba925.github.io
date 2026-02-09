@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhinaba Ghosh | Quantum & Quant Research</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="canvas"></canvas> <nav>
+        <div class="logo">AG.</div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Research</a></li>
+            <li><a href="#skills">Stack</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <p class="greeting">Hi, I am</p>
+                <h1 class="name">Abhinaba Ghosh.</h1>
+                <h2 class="typing-text">I build <span id="typewriter"></span></h2>
+                <p class="bio">
+                    M.Tech IIT Delhi | BS-MS IISER Kolkata. <br>
+                    Bridging <b>Quantum Mechanics</b>, <b>Machine Learning</b>, and <b>Quantitative Finance</b>.
+                </p>
+                <a href="#projects" class="btn">View My Work</a>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2 class="section-title">Selected Research</h2>
+            <div class="project-grid">
+                
+                <div class="card">
+                    <div class="card-header">
+                        <i class="fa-solid fa-brain"></i>
+                        <span>Machine Learning</span>
+                    </div>
+                    <h3>Black-Scholes with PINNs</h3>
+                    <p>Solving the option pricing PDE using Physics-Informed Neural Networks.</p>
+                    <div class="math-preview">
+                        $$ \frac{\partial V}{\partial t} + \frac{1}{2}\sigma^2 S^2 \frac{\partial^2 V}{\partial S^2} + rS \frac{\partial V}{\partial S} - rV = 0 $$
+                    </div>
+                    <div class="tags">
+                        <span>PyTorch</span><span>Stochastic Calculus</span><span>Python</span>
+                    </div>
+                    <a href="#" class="project-link"><i class="fa-brands fa-github"></i> Code</a>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <i class="fa-solid fa-atom"></i>
+                        <span>Quantum Computing</span>
+                    </div>
+                    <h3>QAOA Optimization</h3>
+                    <p>Hybrid quantum-classical algorithms for combinatorial optimization problems.</p>
+                    <div class="tags">
+                        <span>Qiskit</span><span>Quantum Algorithms</span><span>Optimization</span>
+                    </div>
+                    <a href="#" class="project-link"><i class="fa-brands fa-github"></i> Code</a>
+                </div>
+
+                 <div class="card">
+                    <div class="card-header">
+                        <i class="fa-solid fa-chart-line"></i>
+                        <span>Quant Finance</span>
+                    </div>
+                    <h3>Alpha Research & Trading</h3>
+                    <p>Statistical arbitrage strategies and market microstructure analysis.</p>
+                    <div class="tags">
+                        <span>Pandas</span><span>Time-Series</span><span>Alpha</span>
+                    </div>
+                    <a href="#" class="project-link"><i class="fa-brands fa-github"></i> Code</a>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Built from scratch by Abhinaba Ghosh.</p>
+        <div class="socials">
+            <a href="https://github.com/Abhinaba925"><i class="fa-brands fa-github"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="mailto:abhinabaghosh.iit@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
