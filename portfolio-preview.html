@@ -1,3 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abhinaba Ghosh | ML · Quantum · Quant</title>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Outfit:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
 /* ═══════════════════════════════════════════════════
    ROOT & RESET
    ═══════════════════════════════════════════════════ */
@@ -933,3 +943,523 @@ footer .neon { color: var(--neon-green); }
   .hero-stats { flex-direction: column; align-items: flex-start; gap: 1rem; }
   .stat-divider { width: 40px; height: 1px; }
 }
+
+</style>
+</head>
+<body>
+  <canvas id="canvas"></canvas>
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="logo" data-text="AG">AG<span class="logo-cursor">_</span></div>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about" data-num="01">About</a></li>
+      <li><a href="#journey" data-num="02">Journey</a></li>
+      <li><a href="#projects" data-num="03">Research</a></li>
+      <li><a href="#skills" data-num="04">Stack</a></li>
+      <li><a href="#beyond" data-num="05">Beyond</a></li>
+      <li><a href="#contact" data-num="06">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <!-- HERO -->
+    <section id="hero">
+      <div class="hero-content">
+        <div class="hero-tag"><span class="tag-dot"></span> system.init &mdash; portfolio loaded</div>
+        <p class="greeting">$ whoami &rarr;</p>
+        <h1 class="name">
+          <span class="first">Abhinaba</span>
+          <span class="last glitch-target">Ghosh.</span>
+        </h1>
+        <div class="typing-line">I build <span id="typewriter"></span><span class="cursor-blink"></span></div>
+        <p class="bio">
+          Researcher &amp; engineer at the intersection of
+          <b>Machine Learning</b>, <b>Physics</b>, and <b>Finance</b>.<br>
+          First-principles thinker. Deep math. Data-driven solutions.
+        </p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn-primary"><i class="fa-solid fa-terminal"></i> View Research</a>
+          <a href="mailto:abhinabaghosh.iit@gmail.com" class="btn-ghost"><i class="fa-solid fa-paper-plane"></i> Say Hello</a>
+          <a href="https://github.com/Abhinaba925" target="_blank" class="btn-ghost"><i class="fa-brands fa-github"></i> GitHub</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><span class="stat-value">AIR 90</span><span class="stat-label">CSIR-NET JRF</span></div>
+          <div class="stat-divider"></div>
+          <div class="stat"><span class="stat-value">2×</span><span class="stat-label">GATE Qualified</span></div>
+          <div class="stat-divider"></div>
+          <div class="stat"><span class="stat-value">IEEE</span><span class="stat-label">Published</span></div>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="section-header reveal">
+        <span class="section-number">01 //</span>
+        <h2 class="section-title">About Me</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>
+            I'm a researcher driven by a <b>first-principles approach</b>, leveraging
+            deep mathematical structures to build robust, intelligent, data-driven solutions
+            across <b>machine learning</b>, <b>quantum computing</b>, and <b>quantitative finance</b>.
+          </p>
+          <p>
+            From modeling fundamental laws of nature at <b>IISER Kolkata</b>, to engineering
+            real-world optical communication systems at <b>IIT Delhi</b>, to diving deep into
+            modern AI at <b>IIT Bombay's C-MInDS</b> — my journey has always been about building a
+            multidisciplinary foundation to tackle complex problems at their core.
+          </p>
+          <p>
+            I believe the most powerful solutions emerge when you understand the physics beneath
+            the math, and the math beneath the code.
+          </p>
+        </div>
+        <div class="terminal-card reveal">
+          <div class="terminal-bar">
+            <div class="terminal-dots">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <span class="terminal-title">abhinaba@research:~</span>
+          </div>
+          <div class="terminal-body">
+            <div class="term-line"><span class="prompt">❯</span> <span class="cmd">cat profile.json</span></div>
+            <div class="term-output json">
+              <span class="json-brace">{</span><br>
+              &nbsp;&nbsp;<span class="json-key">"name"</span>: <span class="json-str">"Abhinaba Ghosh"</span>,<br>
+              &nbsp;&nbsp;<span class="json-key">"role"</span>: <span class="json-str">"Research Staff"</span>,<br>
+              &nbsp;&nbsp;<span class="json-key">"org"</span>: <span class="json-str">"C-MInDS, IIT Bombay"</span>,<br>
+              &nbsp;&nbsp;<span class="json-key">"focus"</span>: [<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span class="json-str">"Machine Learning"</span>,<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span class="json-str">"Quantum Computing"</span>,<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span class="json-str">"Quantitative Finance"</span>,<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span class="json-str">"Wireless Communication"</span><br>
+              &nbsp;&nbsp;],<br>
+              &nbsp;&nbsp;<span class="json-key">"status"</span>: <span class="json-val">"building_the_future"</span><br>
+              <span class="json-brace">}</span>
+            </div>
+            <div class="term-line"><span class="prompt">❯</span> <span class="cmd-blink">█</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- JOURNEY -->
+    <section id="journey">
+      <div class="section-header reveal">
+        <span class="section-number">02 //</span>
+        <h2 class="section-title">The Journey</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-marker"><div class="marker-dot active-dot"></div><div class="marker-line"></div></div>
+          <div class="timeline-content">
+            <div class="timeline-badge">Current</div>
+            <h3><i class="fa-solid fa-microchip"></i> Research Staff — C-MInDS, IIT Bombay</h3>
+            <p>Diving deep into modern AI with advanced work in <b>Machine Learning</b>, <b>Probabilistic Models</b>, <b>NLP</b>, and <b>Quantum Computing</b>.</p>
+            <div class="timeline-tags"><span>ML</span><span>NLP</span><span>Quantum ML</span><span>Probabilistic Models</span></div>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-marker"><div class="marker-dot"></div><div class="marker-line"></div></div>
+          <div class="timeline-content">
+            <h3><i class="fa-solid fa-satellite-dish"></i> M.Tech — IIT Delhi</h3>
+            <p>Designed and built a <b>Free-Space Optical communication link</b> achieving <b>1 Gbps</b> from scratch. Published and presented at <b>IEEE ANTS</b>.</p>
+            <div class="timeline-tags"><span>FSO</span><span>1 Gbps</span><span>IEEE ANTS</span><span>Optical Systems</span></div>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-marker"><div class="marker-dot"></div><div class="marker-line"></div></div>
+          <div class="timeline-content">
+            <h3><i class="fa-solid fa-atom"></i> BS-MS Physics — IISER Kolkata</h3>
+            <p>Modeled fundamental laws of nature. Specializing in Physics but discovered a deeper passion for <b>Mathematics</b> and <b>Machine Learning</b>.</p>
+            <div class="timeline-tags"><span>Physics</span><span>Mathematics</span><span>First Principles</span></div>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-marker"><div class="marker-dot trophy-dot"></div></div>
+          <div class="timeline-content achievement-card">
+            <h3><i class="fa-solid fa-trophy"></i> National Achievements</h3>
+            <div class="achievement-grid">
+              <div class="achievement-item"><span class="achievement-value">AIR 90</span><span class="achievement-label">CSIR-NET (JRF)</span></div>
+              <div class="achievement-item"><span class="achievement-value">2× GATE</span><span class="achievement-label">Physics & Mathematics</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESEARCH -->
+    <section id="projects">
+      <div class="section-header reveal">
+        <span class="section-number">03 //</span>
+        <h2 class="section-title">What I'm Building</h2>
+      </div>
+      <div class="project-grid stagger-children">
+        <div class="card reveal">
+          <div class="card-content">
+            <div class="card-icon"><i class="fa-solid fa-chart-line"></i></div>
+            <div class="card-label">Quantitative Finance</div>
+            <h3>Algorithmic Trading Strategies</h3>
+            <p>Backtesting and deploying algorithmic trading strategies — finding alpha through statistical rigor and systematic execution.</p>
+            <div class="tags"><span>Python</span><span>Pandas</span><span>Backtesting</span><span>Time-Series</span></div>
+            <a href="https://github.com/Abhinaba925" target="_blank" class="project-link"><i class="fa-brands fa-github"></i> Explore <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="card reveal">
+          <div class="card-content">
+            <div class="card-icon"><i class="fa-solid fa-satellite-dish"></i></div>
+            <div class="card-label">Quantum × Wireless</div>
+            <h3>Quantum-Enhanced Communication</h3>
+            <p>Architecting a framework using Quantum Optimization &amp; Spintronics to solve NP-Hard problems in wireless systems.</p>
+            <div class="tags"><span>Qiskit</span><span>Optimization</span><span>Spintronics</span><span>NP-Hard</span></div>
+            <a href="https://github.com/Abhinaba925" target="_blank" class="project-link"><i class="fa-brands fa-github"></i> Explore <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="card reveal">
+          <div class="card-content">
+            <div class="card-icon"><i class="fa-solid fa-brain"></i></div>
+            <div class="card-label">Core AI / ML</div>
+            <h3>NLP & Quantum ML</h3>
+            <p>Exploring frontiers of Natural Language Processing and Quantum-enhanced Machine Learning — language models meet quantum circuits.</p>
+            <div class="tags"><span>LangChain</span><span>PyTorch</span><span>NLP</span><span>Quantum ML</span></div>
+            <a href="https://github.com/Abhinaba925" target="_blank" class="project-link"><i class="fa-brands fa-github"></i> Explore <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="card featured reveal">
+          <div class="card-content">
+            <div class="card-icon"><i class="fa-solid fa-bolt"></i></div>
+            <div class="card-label">Featured · IEEE Published</div>
+            <h3>FSO Communication — 1 Gbps</h3>
+            <p>Built a Free-Space Optical communication link from the ground up. Published &amp; presented at IEEE ANTS conference.</p>
+            <div class="math-preview">
+              $$ \text{BER} = \frac{1}{2}\text{erfc}\!\left(\frac{Q}{\sqrt{2}}\right),\quad Q = \frac{I_1 - I_0}{\sigma_1 + \sigma_0} $$
+            </div>
+            <div class="tags"><span>IEEE ANTS</span><span>Optical</span><span>Hardware</span><span>1 Gbps</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="section-header reveal">
+        <span class="section-number">04 //</span>
+        <h2 class="section-title">Tech Stack</h2>
+      </div>
+      <div class="stack-grid stagger-children">
+        <div class="stack-category reveal">
+          <h4><i class="fa-solid fa-flask"></i> ML & Data Science</h4>
+          <div class="skill-item"><span class="skill-name">Python</span><div class="skill-bar"><div class="skill-bar-fill" data-width="96%"></div></div></div>
+          <div class="skill-item"><span class="skill-name">PyTorch</span><div class="skill-bar"><div class="skill-bar-fill" data-width="90%"></div></div></div>
+          <div class="skill-item"><span class="skill-name">TensorFlow</span><div class="skill-bar"><div class="skill-bar-fill" data-width="82%"></div></div></div>
+          <div class="skill-item"><span class="skill-name">Scikit-learn</span><div class="skill-bar"><div class="skill-bar-fill" data-width="88%"></div></div></div>
+          <div class="skill-item"><span class="skill-name">LangChain</span><div class="skill-bar"><div class="skill-bar-fill" data-width="78%"></div></div></div>
+          <div class="skill-item"><span class="skill-name">Pandas / NumPy</span><div class="skill-bar"><div class="skill-bar-fill" data-width="95%"></div></div></div>
+        </div>
+        <div class="stack-category reveal">
+          <h4><i class="fa-solid fa-atom"></i> Scientific & Quantum</h4>
+          <div class="skill-item"><span class="skill-name">Qiskit</span><div class="skill-bar"><div class="skill-bar-fill" data-width="85%"></div></div></div>
+          <div class="skill-item"><span class="skill-name">MATLAB</span><div class="skill-bar"><div class="skill-bar-fill" data-width="80%"></div></div></div>
+          <div class="skill-item"><span class="skill-name">LaTeX</span><div class="skill-bar"><div class="skill-bar-fill" data-width="90%"></div></div></div>
+        </div>
+        <div class="stack-category reveal">
+          <h4><i class="fa-solid fa-code"></i> Core Programming</h4>
+          <div class="skill-item"><span class="skill-name">C</span><div class="skill-bar"><div class="skill-bar-fill" data-width="80%"></div></div></div>
+          <div class="skill-item"><span class="skill-name">C++</span><div class="skill-bar"><div class="skill-bar-fill" data-width="78%"></div></div></div>
+          <div class="skill-item"><span class="skill-name">MySQL</span><div class="skill-bar"><div class="skill-bar-fill" data-width="72%"></div></div></div>
+        </div>
+        <div class="stack-category reveal">
+          <h4><i class="fa-solid fa-server"></i> DevOps & Tools</h4>
+          <div class="skill-item"><span class="skill-name">Git / GitHub</span><div class="skill-bar"><div class="skill-bar-fill" data-width="92%"></div></div></div>
+          <div class="skill-item"><span class="skill-name">Linux / Bash</span><div class="skill-bar"><div class="skill-bar-fill" data-width="88%"></div></div></div>
+          <div class="skill-item"><span class="skill-name">Docker</span><div class="skill-bar"><div class="skill-bar-fill" data-width="68%"></div></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BEYOND -->
+    <section id="beyond">
+      <div class="section-header reveal">
+        <span class="section-number">05 //</span>
+        <h2 class="section-title">Beyond the Code</h2>
+      </div>
+      <div class="beyond-grid stagger-children">
+        <div class="beyond-card chess-card reveal">
+          <div class="chess-piece">♞</div>
+          <h3>Chess Player</h3>
+          <p>Strategic thinking on 64 squares. The pattern recognition and deep calculation in chess is directly complementary to building robust systems.</p>
+          <a href="https://www.chess.com/member/abhinabaghosh" target="_blank" class="project-link"><i class="fa-solid fa-chess-knight"></i> Challenge me <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="beyond-card reveal">
+          <div class="beyond-icon"><i class="fa-solid fa-scroll"></i></div>
+          <h3>ArXiv Explorer</h3>
+          <p>Deep-diving into the latest research on quantum computing, ML theory, and mathematical finance. Always hunting the next breakthrough.</p>
+        </div>
+        <div class="beyond-card reveal">
+          <div class="beyond-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+          <h3>First-Principles Builder</h3>
+          <p>Breaking things to understand how they work. From 1 Gbps optical links to quantum optimization — I build from the ground up.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="section-header reveal">
+        <span class="section-number">06 //</span>
+        <h2 class="section-title">Let's Collaborate</h2>
+      </div>
+      <p class="contact-text reveal">
+        Always open to discussing <b>Quantitative Finance</b>, <b>NLP</b>, and <b>Quantum Machine Learning</b>.
+        Let's build something extraordinary.
+      </p>
+      <div class="contact-links reveal">
+        <a href="mailto:abhinabaghosh.iit@gmail.com" class="contact-btn"><i class="fa-solid fa-envelope"></i> Email</a>
+        <a href="https://github.com/Abhinaba925" target="_blank" class="contact-btn"><i class="fa-brands fa-github"></i> GitHub</a>
+        <a href="https://www.linkedin.com/in/abhinaba-ghosh-293a83155/" target="_blank" class="contact-btn"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+        <a href="https://www.chess.com/member/abhinabaghosh" target="_blank" class="contact-btn"><i class="fa-solid fa-chess"></i> Chess.com</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>/* <span class="neon">Abhinaba Ghosh</span> · designed &amp; built from scratch · &copy; 2025 */</p>
+  </footer>
+
+  <!-- STATUS BAR -->
+  <div class="status-bar">
+    <div><span class="status-dot"></span><span class="active">ONLINE</span> &nbsp;|&nbsp; main &nbsp;|&nbsp; UTF-8</div>
+    <div id="statusSection">hero</div>
+    <div>Ln 1, Col 1 &nbsp;|&nbsp; <span class="active">Python</span></div>
+  </div>
+
+  <script>
+/* ═══════════════════════════════════════════════════
+   MATRIX RAIN
+   ═══════════════════════════════════════════════════ */
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+
+function resizeCanvas() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
+resizeCanvas();
+window.addEventListener('resize', resizeCanvas);
+
+const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$%^&*()ΣΩΔΨαβγδεζηθλμπσφψω∂∫∮∇≈≠∞±√∑∏⟨⟩|ℏ';
+const fontSize = 13;
+let columns = Math.floor(canvas.width / fontSize);
+let drops = Array(columns).fill(1);
+
+function drawMatrix() {
+  ctx.fillStyle = 'rgba(4, 6, 11, 0.07)';
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  ctx.font = `${fontSize}px "JetBrains Mono", monospace`;
+
+  for (let i = 0; i < drops.length; i++) {
+    const char = chars[Math.floor(Math.random() * chars.length)];
+    const x = i * fontSize;
+    const y = drops[i] * fontSize;
+
+    // Random bright heads
+    const r = Math.random();
+    if (r > 0.97) {
+      ctx.fillStyle = 'rgba(0, 229, 255, 0.5)';
+    } else if (r > 0.94) {
+      ctx.fillStyle = 'rgba(0, 255, 157, 0.25)';
+    } else {
+      ctx.fillStyle = 'rgba(0, 255, 157, 0.09)';
+    }
+
+    ctx.fillText(char, x, y);
+
+    if (y > canvas.height && Math.random() > 0.985) {
+      drops[i] = 0;
+    }
+    drops[i]++;
+  }
+}
+
+setInterval(drawMatrix, 50);
+
+window.addEventListener('resize', () => {
+  columns = Math.floor(canvas.width / fontSize);
+  drops = Array(columns).fill(1);
+});
+
+/* ═══════════════════════════════════════════════════
+   CURSOR GLOW
+   ═══════════════════════════════════════════════════ */
+const cursorGlow = document.getElementById('cursorGlow');
+let mouseX = 0, mouseY = 0;
+
+document.addEventListener('mousemove', (e) => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+  cursorGlow.style.left = mouseX + 'px';
+  cursorGlow.style.top = mouseY + 'px';
+  cursorGlow.classList.add('visible');
+});
+
+document.addEventListener('mouseleave', () => {
+  cursorGlow.classList.remove('visible');
+});
+
+/* ═══════════════════════════════════════════════════
+   TYPEWRITER
+   ═══════════════════════════════════════════════════ */
+const phrases = [
+  'quantum algorithms.',
+  'algorithmic trading systems.',
+  'neural PDE solvers.',
+  'quantum-enhanced wireless links.',
+  'NLP pipelines.',
+  'statistical arbitrage engines.',
+  'physics-informed networks.',
+  'hybrid quantum-classical models.'
+];
+let phraseIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+const typeEl = document.getElementById('typewriter');
+
+function typeLoop() {
+  const current = phrases[phraseIndex];
+  if (isDeleting) {
+    typeEl.textContent = current.substring(0, charIndex--);
+    if (charIndex < 0) {
+      isDeleting = false;
+      phraseIndex = (phraseIndex + 1) % phrases.length;
+      setTimeout(typeLoop, 350);
+      return;
+    }
+    setTimeout(typeLoop, 25);
+  } else {
+    typeEl.textContent = current.substring(0, charIndex++);
+    if (charIndex > current.length) {
+      isDeleting = true;
+      setTimeout(typeLoop, 2200);
+      return;
+    }
+    setTimeout(typeLoop, 65);
+  }
+}
+setTimeout(typeLoop, 1200);
+
+/* ═══════════════════════════════════════════════════
+   NAVIGATION
+   ═══════════════════════════════════════════════════ */
+const navbar = document.getElementById('navbar');
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('navLinks');
+
+// Scroll effect
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 50);
+});
+
+// Hamburger toggle
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('active');
+  navLinks.classList.toggle('open');
+});
+
+// Close on link click
+navLinks.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', () => {
+    hamburger.classList.remove('active');
+    navLinks.classList.remove('open');
+  });
+});
+
+/* ═══════════════════════════════════════════════════
+   SCROLL REVEAL
+   ═══════════════════════════════════════════════════ */
+const revealElements = document.querySelectorAll('.reveal');
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+revealElements.forEach(el => revealObserver.observe(el));
+
+/* ═══════════════════════════════════════════════════
+   CARD MOUSE TRACKING
+   ═══════════════════════════════════════════════════ */
+document.querySelectorAll('.card').forEach(card => {
+  card.addEventListener('mousemove', (e) => {
+    const rect = card.getBoundingClientRect();
+    card.style.setProperty('--mouse-x', (e.clientX - rect.left) + 'px');
+    card.style.setProperty('--mouse-y', (e.clientY - rect.top) + 'px');
+  });
+});
+
+/* ═══════════════════════════════════════════════════
+   SKILL BAR ANIMATION
+   ═══════════════════════════════════════════════════ */
+const skillBars = document.querySelectorAll('.skill-bar-fill');
+const skillObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.width = entry.target.dataset.width;
+    }
+  });
+}, { threshold: 0.3 });
+
+skillBars.forEach(bar => skillObserver.observe(bar));
+
+/* ═══════════════════════════════════════════════════
+   STATUS BAR — CURRENT SECTION
+   ═══════════════════════════════════════════════════ */
+const statusEl = document.getElementById('statusSection');
+const sections = document.querySelectorAll('section[id]');
+
+if (statusEl) {
+  const sectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        statusEl.textContent = entry.target.id;
+      }
+    });
+  }, { threshold: 0.3 });
+
+  sections.forEach(s => sectionObserver.observe(s));
+}
+
+/* ═══════════════════════════════════════════════════
+   ACTIVE NAV HIGHLIGHTING
+   ═══════════════════════════════════════════════════ */
+const navHighlightObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const id = entry.target.id;
+      navLinks.querySelectorAll('a').forEach(a => {
+        a.style.color = a.getAttribute('href') === `#${id}` ? '#00ff9d' : '';
+      });
+    }
+  });
+}, { threshold: 0.35 });
+
+sections.forEach(s => navHighlightObserver.observe(s));
+
+</script>
+</body>
+</html>
