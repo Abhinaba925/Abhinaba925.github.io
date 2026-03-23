@@ -4,42 +4,147 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abhinaba Ghosh | Quantum & Quant Research</title>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <canvas id="canvas"></canvas>     <nav>
+    <canvas id="canvas"></canvas>
+
+    <nav>
         <div class="logo">AG.</div>
-        <ul class="nav-links">
-            <li><a href="#about">About</a></li>
+        <button class="nav-toggle" id="navToggle"><i class="fa-solid fa-bars"></i></button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#experience">Experience</a></li>
             <li><a href="#projects">Research</a></li>
-            <li><a href="#skills">Stack</a></li>
+            <li><a href="#stack">Stack</a></li>
+            <li><a href="#publications">Papers</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
     <main>
+
+        <!-- ═══════ HERO ═══════ -->
         <section id="hero">
             <div class="hero-content">
+                <div class="hero-tag"><span class="pulse-dot"></span> Research Consultant @ WorldQuant BRAIN</div>
                 <p class="greeting">Hi, I am</p>
                 <h1 class="name">Abhinaba Ghosh.</h1>
-                <h2 class="typing-text">I build <span id="typewriter"></span></h2>
+                <h2 class="typing-text">I build <span id="typewriter"></span><span class="cursor">|</span></h2>
                 <p class="bio">
-                    Research Consultant @ <b>WorldQuant BRAIN</b> | M.Tech IIT Delhi | BS-MS IISER Kolkata. <br>
-                    Bridging <b>Quantitative Finance</b>, <b>Quantum Machine Learning</b>, <b>NLP Pipelines</b>, and <b>Agentic AI</b>.
+                    <b>M.Tech IIT Delhi</b> · <b>BS-MS IISER Kolkata</b>. <br>
+                    Researcher at the intersection of <b>Quantitative Finance</b>, <b>Quantum Machine Learning</b>, <b>NLP Pipelines</b>, and <b>Agentic AI</b> — leveraging deep mathematical structures to build robust, data-driven solutions.
                 </p>
-                <a href="#projects" class="btn">View My Work</a>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary"><i class="fa-solid fa-flask"></i> View Research</a>
+                    <a href="mailto:abhinabaghosh.iit@gmail.com" class="btn btn-ghost"><i class="fa-solid fa-envelope"></i> Get in Touch</a>
+                    <a href="https://github.com/Abhinaba925" target="_blank" class="btn btn-ghost"><i class="fa-brands fa-github"></i> GitHub</a>
+                </div>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-card">
+                    <div class="stat-value">40+</div>
+                    <div class="stat-label">Quant Alphas</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">3.29</div>
+                    <div class="stat-label">Peak Sharpe</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">18.65%</div>
+                    <div class="stat-label">Peak Ann. Return</div>
+                </div>
             </div>
         </section>
 
+        <!-- ═══════ EXPERIENCE ═══════ -->
+        <section id="experience">
+            <div class="section-header">
+                <span class="section-tag">// background</span>
+                <h2 class="section-title">Experience & Focus</h2>
+            </div>
+            <div class="experience-grid">
+                <div class="timeline">
+                    <div class="tl-item">
+                        <div class="tl-dot active"></div>
+                        <div class="tl-content">
+                            <span class="tl-date">Sept 2025 – Present</span>
+                            <h3 class="tl-role">Research Consultant</h3>
+                            <p class="tl-org">WorldQuant BRAIN · Remote</p>
+                            <p class="tl-desc">Engineered and deployed 40+ predictive quantitative alphas across global equity universes (USA, Europe, Asia). Achieved out-of-sample Sharpe ratios up to 3.29 and annualized returns peaking at 18.65%.</p>
+                        </div>
+                    </div>
+                    <div class="tl-item">
+                        <div class="tl-dot"></div>
+                        <div class="tl-content">
+                            <span class="tl-date">Aug 2023 – March 2025</span>
+                            <h3 class="tl-role">Research Staff</h3>
+                            <p class="tl-org">CMInDS, IIT Bombay · Fractal Analytics</p>
+                            <p class="tl-desc">Formulated NP-hard combinatorial optimization problems into Ising Hamiltonians for quantum annealing and spintronic models, achieving near-optimal solutions with improved time-complexity.</p>
+                        </div>
+                    </div>
+                    <div class="tl-item">
+                        <div class="tl-dot"></div>
+                        <div class="tl-content">
+                            <span class="tl-date">2021 – 2023</span>
+                            <h3 class="tl-role">M.Tech (EE & Physics)</h3>
+                            <p class="tl-org">IIT Delhi</p>
+                            <p class="tl-desc">ML, signal processing, quantum information. TA for Physics M.Sc. Lab. Built a Free-Space Optical communication link from scratch.</p>
+                        </div>
+                    </div>
+                    <div class="tl-item">
+                        <div class="tl-dot"></div>
+                        <div class="tl-content">
+                            <span class="tl-date">2015 – 2020</span>
+                            <h3 class="tl-role">BS-MS Dual Degree in Physics</h3>
+                            <p class="tl-org">IISER Kolkata · INSPIRE Scholar</p>
+                            <p class="tl-desc">Five-year integrated program in physics. TA for Intro to Computer Programming, mentoring 40+ students.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="focus-pillars">
+                    <div class="pillar" data-color="cyan">
+                        <i class="fa-solid fa-chart-line pillar-icon"></i>
+                        <h4>Quantitative Finance</h4>
+                        <p>Alpha generation, statistical arbitrage, portfolio optimization (Mean-Variance, HRP, Risk Parity), backtesting frameworks.</p>
+                    </div>
+                    <div class="pillar" data-color="violet">
+                        <i class="fa-solid fa-atom pillar-icon"></i>
+                        <h4>Quantum ML & Optimization</h4>
+                        <p>Variational quantum circuits, QAOA, Ising formulations, quantum annealing for NP-hard problems.</p>
+                    </div>
+                    <div class="pillar" data-color="amber">
+                        <i class="fa-solid fa-brain pillar-icon"></i>
+                        <h4>NLP & RAG Pipelines</h4>
+                        <p>Retrieval-Augmented Generation, LLM fine-tuning (LoRA), vector databases, self-correcting pipelines.</p>
+                    </div>
+                    <div class="pillar" data-color="emerald">
+                        <i class="fa-solid fa-robot pillar-icon"></i>
+                        <h4>Agentic AI & Multi-Agent</h4>
+                        <p>LangGraph orchestration, multi-agent workflows (Planner → Writer → Critic → Reviser).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════ PROJECTS ═══════ -->
         <section id="projects">
-            <h2 class="section-title">Selected Research</h2>
+            <div class="section-header">
+                <span class="section-tag">// portfolio</span>
+                <h2 class="section-title">Selected Research & Projects</h2>
+            </div>
+            <div class="filter-bar">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="quant">Quant Finance</button>
+                <button class="filter-btn" data-filter="quantum">Quantum</button>
+                <button class="filter-btn" data-filter="nlp">NLP / RAG</button>
+                <button class="filter-btn" data-filter="agentic">Agentic AI</button>
+            </div>
             <div class="project-grid">
 
-                <div class="card">
+                <div class="card" data-category="quant">
                     <div class="card-header">
                         <i class="fa-solid fa-brain"></i>
                         <span>Machine Learning</span>
@@ -55,41 +160,238 @@
                     <a href="#" class="project-link"><i class="fa-brands fa-github"></i> Code</a>
                 </div>
 
-                <div class="card">
-                    <div class="card-header">
-                        <i class="fa-solid fa-atom"></i>
-                        <span>Quantum Computing</span>
-                    </div>
-                    <h3>QAOA Optimization</h3>
-                    <p>Hybrid quantum-classical algorithms for combinatorial optimization problems.</p>
-                    <div class="tags">
-                        <span>Qiskit</span><span>Quantum Algorithms</span><span>Optimization</span>
-                    </div>
-                    <a href="#" class="project-link"><i class="fa-brands fa-github"></i> Code</a>
-                </div>
-
-                <div class="card">
+                <div class="card" data-category="quant">
                     <div class="card-header">
                         <i class="fa-solid fa-chart-line"></i>
                         <span>Quant Finance</span>
                     </div>
-                    <h3>Alpha Research & Trading</h3>
-                    <p>Statistical arbitrage strategies and market microstructure analysis.</p>
+                    <h3>Polyglot Quant AI — Portfolio Engine</h3>
+                    <p>Comprehensive quant infrastructure with Mean-Variance, Risk Parity, HRP optimization. Rigorous backtesting with turnover, slippage, taxes. RAG pipeline for alternative data from financial reports.</p>
                     <div class="tags">
-                        <span>Pandas</span><span>Time-Series</span><span>Alpha</span>
+                        <span>Python</span><span>Pandas</span><span>SLSQP</span><span>HRP</span><span>RAG</span>
+                    </div>
+                    <a href="#" class="project-link"><i class="fa-brands fa-github"></i> Code</a>
+                </div>
+
+                <div class="card" data-category="quantum">
+                    <div class="card-header">
+                        <i class="fa-solid fa-atom"></i>
+                        <span>Quantum Computing</span>
+                    </div>
+                    <h3>Ising Model for MIMO Detection</h3>
+                    <p>Addressed NP-Hard ML decoding for MIMO systems via Ising model formulation where the ground state maps to optimal solution. Near-optimal BER with drastically reduced complexity.</p>
+                    <div class="tags">
+                        <span>Python</span><span>MATLAB</span><span>NumPy</span><span>SciPy</span>
+                    </div>
+                    <a href="#" class="project-link"><i class="fa-brands fa-github"></i> Code</a>
+                </div>
+
+                <div class="card" data-category="quantum">
+                    <div class="card-header">
+                        <i class="fa-solid fa-atom"></i>
+                        <span>Quantum Computing</span>
+                    </div>
+                    <h3>Quantum vs Classical ML for Pulsars</h3>
+                    <p>8-qubit Variational Quantum Classifier using Qiskit on 17,898 astrophysical samples. Benchmarked VQC against SVM (F1: 0.84) and Random Forest (F1: 0.85).</p>
+                    <div class="tags">
+                        <span>Qiskit</span><span>Scikit-learn</span><span>Parameter-Shift</span>
+                    </div>
+                    <a href="#" class="project-link"><i class="fa-brands fa-github"></i> Code</a>
+                </div>
+
+                <div class="card" data-category="nlp">
+                    <div class="card-header">
+                        <i class="fa-solid fa-database"></i>
+                        <span>NLP / RAG</span>
+                    </div>
+                    <h3>Custom RAG & LLM Fine-Tuning</h3>
+                    <p>RAG pipeline with LoRA fine-tuned TinyLlama (1.1B) + Weaviate vector DB. Optimized via SFTTrainer with reduced compute overhead.</p>
+                    <div class="tags">
+                        <span>PyTorch</span><span>Hugging Face</span><span>Weaviate</span><span>LoRA</span>
+                    </div>
+                    <a href="#" class="project-link"><i class="fa-brands fa-github"></i> Code</a>
+                </div>
+
+                <div class="card" data-category="nlp">
+                    <div class="card-header">
+                        <i class="fa-solid fa-rotate"></i>
+                        <span>NLP / RAG</span>
+                    </div>
+                    <h3>Self-Correcting RAG</h3>
+                    <p>Self-correcting RAG using LangGraph + Gemini 1.5. Automated LLM-as-a-Judge evaluation loop to reduce hallucination rates.</p>
+                    <div class="tags">
+                        <span>LangGraph</span><span>Gemini API</span><span>LangChain</span>
+                    </div>
+                    <a href="#" class="project-link"><i class="fa-brands fa-github"></i> Code</a>
+                </div>
+
+                <div class="card" data-category="agentic">
+                    <div class="card-header">
+                        <i class="fa-solid fa-robot"></i>
+                        <span>Agentic AI</span>
+                    </div>
+                    <h3>Auto-Report: Multi-Agent System</h3>
+                    <p>Multi-agent workflow — Planner, Researcher, Writer, Critic, Reviser — via LangGraph + Groq API (Llama-3.1-8B). Automated LLM-as-Judge benchmarking vs single-LLM baselines.</p>
+                    <div class="tags">
+                        <span>LangGraph</span><span>LangChain</span><span>Groq API</span><span>Streamlit</span>
                     </div>
                     <a href="#" class="project-link"><i class="fa-brands fa-github"></i> Code</a>
                 </div>
 
             </div>
         </section>
+
+        <!-- ═══════ TECH STACK ═══════ -->
+        <section id="stack">
+            <div class="section-header">
+                <span class="section-tag">// arsenal</span>
+                <h2 class="section-title">Technical Stack</h2>
+            </div>
+            <div class="stack-grid">
+                <div class="stack-category">
+                    <h4>Languages</h4>
+                    <div class="stack-items">
+                        <span>Python</span><span>C++</span><span>C</span><span>MATLAB</span><span>SQL</span>
+                    </div>
+                </div>
+                <div class="stack-category">
+                    <h4>AI / ML</h4>
+                    <div class="stack-items">
+                        <span>PyTorch</span><span>TensorFlow</span><span>Scikit-learn</span><span>Hugging Face</span><span>Qiskit</span>
+                    </div>
+                </div>
+                <div class="stack-category">
+                    <h4>Agentic & NLP</h4>
+                    <div class="stack-items">
+                        <span>LangChain</span><span>LangGraph</span><span>Weaviate</span><span>FAISS</span><span>RAG</span>
+                    </div>
+                </div>
+                <div class="stack-category">
+                    <h4>Data & Analysis</h4>
+                    <div class="stack-items">
+                        <span>Pandas</span><span>NumPy</span><span>SciPy</span><span>Matplotlib</span>
+                    </div>
+                </div>
+                <div class="stack-category">
+                    <h4>Core Concepts</h4>
+                    <div class="stack-items">
+                        <span>LLMs</span><span>GenAI</span><span>CNNs</span><span>LSTM</span><span>ARIMA</span><span>Time Series</span>
+                    </div>
+                </div>
+                <div class="stack-category">
+                    <h4>Tools & Cloud</h4>
+                    <div class="stack-items">
+                        <span>Git</span><span>Docker</span><span>AWS</span><span>GCP</span><span>LaTeX</span><span>Linux</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════ PUBLICATIONS ═══════ -->
+        <section id="publications">
+            <div class="section-header">
+                <span class="section-tag">// published</span>
+                <h2 class="section-title">Publications</h2>
+            </div>
+            <div class="pub-list">
+                <div class="pub-card">
+                    <div class="pub-icon"><i class="fa-solid fa-microchip"></i></div>
+                    <div class="pub-body">
+                        <span class="pub-venue">Neuromorphic Computing & Engineering, 2026</span>
+                        <h4>Symbol detection in a MIMO wireless communication system using a FeFET-coupled CMOS ring oscillator array</h4>
+                        <p class="pub-authors">H. K. Jadia, <strong>A. Ghosh</strong>, et al.</p>
+                    </div>
+                </div>
+                <div class="pub-card">
+                    <div class="pub-icon violet"><i class="fa-solid fa-satellite-dish"></i></div>
+                    <div class="pub-body">
+                        <span class="pub-venue">IEEE ANTS, 2023</span>
+                        <h4>Experimental Investigation of the Atmospheric Turbulence Effects on FSO Communication Systems</h4>
+                        <p class="pub-authors"><strong>A. Ghosh</strong>, G. Verma, Sonali, A. Dixit</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════ ACHIEVEMENTS ═══════ -->
+        <section id="achievements">
+            <div class="section-header">
+                <span class="section-tag">// highlights</span>
+                <h2 class="section-title">Scholastic Achievements</h2>
+            </div>
+            <div class="achievements-grid">
+                <div class="ach-card"><div class="ach-val">AIR 90</div><div class="ach-label">CSIR NET (JRF) — Physics</div><div class="ach-year">2019</div></div>
+                <div class="ach-card"><div class="ach-val">AIR 278</div><div class="ach-label">GATE — Mathematics</div><div class="ach-year">2021</div></div>
+                <div class="ach-card"><div class="ach-val">AIR 333</div><div class="ach-label">GATE — Physics</div><div class="ach-year">2022</div></div>
+                <div class="ach-card"><div class="ach-val">INSPIRE</div><div class="ach-label">Scholar — DST, Govt. of India</div><div class="ach-year">2015–2020</div></div>
+            </div>
+        </section>
+
+        <!-- ═══════ JOURNEY ═══════ -->
+        <section id="journey">
+            <div class="section-header">
+                <span class="section-tag">// the path</span>
+                <h2 class="section-title">My Journey</h2>
+            </div>
+            <div class="journey-grid">
+                <div class="journey-card">
+                    <div class="journey-emoji">⚛️</div>
+                    <h4>First Principles</h4>
+                    <p>BS-MS Physics at IISER Kolkata — modeled the fundamental laws of nature before gravitating toward Mathematics and ML.</p>
+                </div>
+                <div class="journey-card">
+                    <div class="journey-emoji">📡</div>
+                    <h4>Real-World Channels</h4>
+                    <p>M.Tech at IIT Delhi — designed and built a Free-Space Optical communication link from scratch. Published at IEEE ANTS.</p>
+                </div>
+                <div class="journey-card">
+                    <div class="journey-emoji">💡</div>
+                    <h4>Advanced Research</h4>
+                    <p>CMInDS, IIT Bombay — combinatorial optimization, AI, and Quantum Computing with Fractal Analytics.</p>
+                </div>
+                <div class="journey-card">
+                    <div class="journey-emoji">📈</div>
+                    <h4>Quantitative Finance</h4>
+                    <p>WorldQuant BRAIN — engineering predictive quantitative alphas across highly liquid global equity universes.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════ BEYOND CODE ═══════ -->
+        <section id="beyond">
+            <div class="beyond-card">
+                <div class="beyond-text">
+                    <span class="section-tag">// beyond the code</span>
+                    <h3>Strategic Thinker, On and Off the Board</h3>
+                    <p>When not crunching numbers or fine-tuning models, I'm an avid chess player. Strategic thinking in chess is complementary to building robust quantitative systems.</p>
+                    <a href="https://www.chess.com/member/abhinabaghosh" target="_blank" class="chess-link"><i class="fa-solid fa-chess-knight"></i> Challenge me on Chess.com</a>
+                </div>
+                <div class="beyond-emoji">♟️</div>
+            </div>
+        </section>
+
+        <!-- ═══════ CONTACT ═══════ -->
+        <section id="contact">
+            <div class="contact-inner">
+                <span class="section-tag center">// let's connect</span>
+                <h2 class="section-title center">Interested in collaborating?</h2>
+                <p class="contact-sub">Always open to discussing Quantitative Finance, NLP, Agentic AI, and Quantum ML.</p>
+                <div class="contact-links">
+                    <a href="mailto:abhinabaghosh.iit@gmail.com" class="contact-btn"><i class="fa-solid fa-envelope"></i> Email</a>
+                    <a href="https://github.com/Abhinaba925" target="_blank" class="contact-btn"><i class="fa-brands fa-github"></i> GitHub</a>
+                    <a href="https://www.linkedin.com/in/abhinaba-ghosh-293a83155/" target="_blank" class="contact-btn"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                    <a href="#" class="contact-btn"><i class="fa-solid fa-code"></i> CodeChef</a>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <footer>
-        <p>Built from scratch by Abhinaba Ghosh.</p>
+        <p>Built from scratch by Abhinaba Ghosh © 2026</p>
         <div class="socials">
-            <a href="https://github.com/Abhinaba925"><i class="fa-brands fa-github"></i></a>
-            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/Abhinaba925" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/abhinaba-ghosh-293a83155/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
             <a href="mailto:abhinabaghosh.iit@gmail.com"><i class="fa-solid fa-envelope"></i></a>
         </div>
     </footer>
